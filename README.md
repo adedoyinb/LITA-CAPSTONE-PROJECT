@@ -88,8 +88,30 @@ FROM [dbo].[LITA Capstone Project csv]
 GROUP BY Product;
 ```
 ![Screenshot (15)](https://github.com/user-attachments/assets/fac6a75f-ee04-493c-9d47-6fd42c11ba65) 
+- Number of sales transaction in each region
+```sql
+Select Region, COUNT (OrderID) as NumOftransactions
+from [dbo].[LITA Capstone Project csv]
+group by region
+```
+- Highest selling product by total sales value
+![image](https://github.com/user-attachments/assets/03c6f402-12dc-437c-991c-ce1c1c334439)
 
-
+-Total revenue per product
+```sql
+Select product, sum (sales_amount) as totalrevenue
+from [dbo].[LITA Capstone Project csv]
+group by product
+```
+- total monthly sales for 2024
+```sql
+SELECT MONTH(OrderDate) AS Month,
+SUM(sales_amount) AS Totalmonthlysales
+FROM [dbo].[LITA Capstone Project csv]
+WHERE YEAR(OrderDate) = 2024
+GROUP BY MONTH(OrderDate)
+order BY MONTH
+``` 
 
 
 
