@@ -73,6 +73,10 @@ After the data retrieval into excel, the data were cleaned and prepared for the 
 - top 3 regions by subscription cancellations.
 - total number of active and canceled subscriptions.
 
+#### Excel EDA for sales data
+Pivot table summary 
+![Screenshot (13)](https://github.com/user-attachments/assets/5f23a913-37e1-40fe-a9e7-43198bc44807)
+
 
 
 
