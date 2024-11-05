@@ -135,6 +135,48 @@ HAVING SUM(CASE
 WHEN OrderDate BETWEEN '2024-06-01' AND '2024-08-31' 
 THEN 1 ELSE 0 END) = 0
 ```
+---
+#### Excel EDA for customer subscription data
+- Pivot table summary
+- ![Screenshot (16)](https://github.com/user-attachments/assets/4d7a17bb-0a6f-4789-9bdb-c5110bfed022)
+
+#### SQL EDA FOR  customer subscription data 
+- Total customers per region
+```sql
+SELECT Region, COUNT(CustomerId) AS TotalCustomers
+FROM [dbo].[LITA Capstone Project]
+GROUP BY Region
+```
+(18750 CUSTOMERS PER REGION) 
+- Most popular subscription type:
+```sql
+SELECT SubscriptionType, COUNT(CustomerId) AS TotalCustomer
+FROM [dbo].[LITA Capstone Project]
+GROUP BY SubscriptionType 
+ORDER BY Totalcustomer DESC
+```
+(most popular is Basic) 
+- Customer who canceled within 6 months
+```sql
+SELECT COUNT(CustomerID) AS TotalCancelledWithinSixMonths
+FROM [dbo].[LITA Capstone Project]
+WHERE Canceled = 'TRUE' 
+AND DATEDIFF(month, SubscriptionStart, SubscriptionEnd) <= 6; 
+```
+- Average subscription duration
+```sql
+SELECT AVG(DATEDIFF(day, SubscriptionStart, SubscriptionEnd)) AS AverageSubscriptionDuration
+FROM [dbo].[LITA Capstone Project];
+```
+- Customer with subscription longer than 12 months
+```sql
+SELECT CustomerID, CustomerName, SubscriptionType, SubscriptionStart, SubscriptionEnd, Subscription_Duration
+FROM [dbo].[LITA Capstone Project]
+WHERE Subscription_Duration > 365;
+```
+-	total revenue by subscription																																																																																												![image](https://github.com/user-attachments/assets/7a72e269-4586-4bc1-b653-f3407d317c74)
+																																																																											
+
 
 
 
