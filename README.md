@@ -111,8 +111,30 @@ FROM [dbo].[LITA Capstone Project csv]
 WHERE YEAR(OrderDate) = 2024
 GROUP BY MONTH(OrderDate)
 order BY MONTH
-``` 
+```
+- Top 5 customers by purchase amount
+- ![image](https://github.com/user-attachments/assets/1f611c0f-f974-4998-94bb-96cee1eea4ca)
 
+- percentage of total sales contributed by each region
+```sql
+SELECT Region, SUM(Sales_amount) AS RegionTotalSales,
+FORMAT(ROUND((SUM(Sales_amount) / CAST((SELECT SUM(Sales_amount) 
+FROM [dbo].[LITA Capstone Project csv]) AS DECIMAL(10,2)) * 100), 1), '0.#') 
+AS PercentageOfTotalSales
+FROM [dbo].[LITA Capstone Project csv]
+GROUP BY Region
+ORDER BY PercentageOfTotalSales DESC
+```
+![image](https://github.com/user-attachments/assets/c6db7d57-afed-46a2-8475-f7507bcfd97c)
+
+- Products with no sales in last quarter:
+```sql
+SELECT Product FROM[dbo].[LITA Capstone Project csv] 
+GROUP BY Product
+HAVING SUM(CASE 
+WHEN OrderDate BETWEEN '2024-06-01' AND '2024-08-31' 
+THEN 1 ELSE 0 END) = 0
+```
 
 
 
