@@ -74,8 +74,21 @@ After the data retrieval into excel, the data were cleaned and prepared for the 
 - total number of active and canceled subscriptions.
 
 #### Excel EDA for sales data
-Pivot table summary 
+- Pivot table summary 
 ![Screenshot (13)](https://github.com/user-attachments/assets/5f23a913-37e1-40fe-a9e7-43198bc44807)
+
+- Other metrics calculated with excel formulas 
+![Screenshot (14)](https://github.com/user-attachments/assets/d86e2cd6-80bc-4d44-8929-4e6ec35f3020) 
+
+#### SQL EDA FOR SALES DATA 
+- Total sales per product
+```sql
+SELECT Product, SUM(Quantity * UnitPrice) AS TotalSales
+FROM [dbo].[LITA Capstone Project csv]
+GROUP BY Product;
+```
+![Screenshot (15)](https://github.com/user-attachments/assets/fac6a75f-ee04-493c-9d47-6fd42c11ba65) 
+
 
 
 
