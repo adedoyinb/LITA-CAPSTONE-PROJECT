@@ -174,7 +174,15 @@ SELECT CustomerID, CustomerName, SubscriptionType, SubscriptionStart, Subscripti
 FROM [dbo].[LITA Capstone Project]
 WHERE Subscription_Duration > 365;
 ```
--	total revenue by subscription																																																																																												![image](https://github.com/user-attachments/assets/7a72e269-4586-4bc1-b653-f3407d317c74)
+- total revenue by subscription																																																																																												![image](https://github.com/user-attachments/assets/7a72e269-4586-4bc1-b653-f3407d317c74)
+
+- Top 3 regions by subscription cancellations
+![image](https://github.com/user-attachments/assets/e5353957-0775-459e-a76b-53de1080d85f)
+
+- total number of active and canceled subscriptions
+![image](https://github.com/user-attachments/assets/646f8783-be79-4ab1-8806-5e1b0dbcdb44)
+
+ 
 																																																																											
 
 
