@@ -182,7 +182,12 @@ WHERE Subscription_Duration > 365;
 - total number of active and canceled subscriptions
 ![image](https://github.com/user-attachments/assets/646f8783-be79-4ab1-8806-5e1b0dbcdb44)
 
- 
+### DATA VISUALISATION 
+Using Power bi, dashboards were created to visualise the insights found in Excel and SQL including the report of some additional data summary 
+---
+Data visualisation for sales performance analysis
+
+Data visualisation for Customer subscription trends 
 																																																																											
 
 
