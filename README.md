@@ -185,7 +185,10 @@ WHERE Subscription_Duration > 365;
 ### DATA VISUALISATION 
 ##### Using Power bi, dashboards were created to visualise the insights found in Excel and SQL including the report of some additional data summary 
 ---
-Data visualisation for sales performance analysis
+Data visualisation for sales performance analysis 
+
+![image](https://github.com/user-attachments/assets/b6300dea-7f90-4153-9d52-ee24ff9703e9)
+
 
 Data visualisation for Customer subscription trends 
 																																																																											
